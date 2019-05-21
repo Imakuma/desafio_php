@@ -1,4 +1,11 @@
 <?php
+$nomeProd = $_GET["nomeProduto"];
+$catProd = $_GET["categoriaProduto"];
+$descProd = $_GET["descricaoProduto"];
+$quantProd = $_GET["quantidadeProduto"];
+$precoProd = $_GET["precoProduto"];
+$caminhoImagem = $_GET["imagemProduto"];
+// echo ($caminhoImagem);
 
 ?>
 
@@ -19,27 +26,27 @@
     <div class="container">
         <div class="row mt-5 p-5" id="container">
             <div class="col-lg-4">
-                <button class="my-4"><a href="index.php" id=>
-                     Voltar para tela de produtos </a></button>
-                <img src="..." class="card-img" alt="...">
+                <button class="my-4"><a href="index.php" id=botaoDetalhes>
+                &larr; Voltar para tela de produtos </a></button>
+                <img src="<?php echo $caminhoImagem?>" class="card-img" alt="...">
 
             </div>
             <div class="col-lg-8">
                 <div class="card-body mt-5">
-                    <h1 class="card-title mt-3">Card title</h1>
+                    <h1 class="card-title mt-3"><?php echo $nomeProd ?></h1>
                     <p class="card-text"><small class="text-muted">Categoria</small></p>
-                    <p class="card-text">Camiseta</p>
+                    <p class="card-text"><?php echo $catProd?></p>
                     <p class="card-text"><small class="text-muted">Descrição</small></p>
-                    <p class="card-text">Camiseta</p>
-                    <div class="container">
+                    <p class="card-text"><?php echo $descProd?></p>
+                    <div class="container" id="containerDetalhe">
                         <div class="row">
                             <div class="col-lg-6 float-left">
                             <p class="card-text"><small class="text-muted">Quantidade em estoque</small></p>
-                            <p class="card-text">Camiseta</p>
+                            <p class="card-text"><?php echo $quantProd?></p>
                             </div>
                             <div class="col-lg-6">
-                            <p class="card-text"><small class="text-muted">Quantidade em estoque</small></p>
-                            <p class="card-text">Camiseta</p>
+                            <p class="card-text"><small class="text-muted">Preço</small></p>
+                            <p class="card-text"><?php echo $precoProd?></p>
                             </div>
 
                         </div>

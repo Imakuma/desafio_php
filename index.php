@@ -37,12 +37,13 @@ $produtos= json_decode($jsonLista, TRUE);
           <tbody>
             <?php foreach ($produtos["listaCadastro"] as $descricao =>$value): ?>
             <tr>
-              <td><a href="detalhe.php" id="linkProduto" method="GET"><?php echo $value["nomeProduto"];?></a></td>
+              <td><a href="detalhe.php?nomeProduto=<?php echo $value["nomeProduto"];?>&categoriaProduto=<?php echo $value["categoriaProduto"];?>&descricaoProduto=<?php echo $value["descricaoProduto"];?>&quantidadeProduto=<?php echo $value["quantidadeProduto"];?>&precoProduto=<?php echo $value["precoProduto"];?>&imagemProduto=<?php echo $value["img"];?>" id="linkProduto"><?php echo $value["nomeProduto"];?></a></td>
               <td><?php echo $value["categoriaProduto"];?></td>
               <td>R$ <?php echo $value["precoProduto"];?> </td>
             </tr>
             <?php endforeach; ?>
           </tbody>
+          
 
         </table>
       </div>
